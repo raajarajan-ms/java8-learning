@@ -1,0 +1,42 @@
+Built-in funcrional interfaces are available under package : java.util.functions 
+
+1)Consumer :
+==========
+*Consumer is a built-in functional interface, which takes in arguments but produces no output.
+    
+    Consumer<T> T- type of argument
+    
+    void accept(T t)
+    
+    default Consumer<T,t> andThen(Consumer< ? super T> after);
+    
+    * andThen(after) is for chaining Consumer. 
+    
+Other Consumer types :
+----------------------
+BiConsumer: accepts two arguments of same and different types.
+    
+     BiConsumer<T,U>  T,U are the type of arguments
+     
+     IntConsumer,LongConsumer,DoubleConsumer are primitive specializations which are not
+     generic type because name itself tells it accepts only int, long and double values
+     
+     
+2)Supplier :
+============
+* which dont take any input but produces output
+
+    Supplier<T> T - type of result produced
+    
+    T get();  
+ 
+ No BiSupplier
+ 
+ primitive Specializations are
+ IntSupplier,LongSupplier,DoubleSupplier,BooleanSupplier
+ 
+ methods are getAsInt(),getAsDouble(),getAsLong(),getAsBoolean();   
+ 
+ 
+3)Function :
+============    
